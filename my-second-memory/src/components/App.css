@@ -1,7 +1,69 @@
 .App {
   text-align: center;
+  background-color: floralwhite;
 }
 
+h1 {
+  color: darkslateblue;
+}
+.App-title {
+  color: rgb(109, 107, 107);
+}
+
+.item-container {
+  margin-left: 100px;
+  margin-right: 100px;
+  border-color: darkblue;
+}
+
+.item-title {
+  margin-top: 50px;
+  background-color: darkturquoise;
+  font-weight: bolder;
+  font-size: larger;
+  color: darkblue;
+}
+
+.additem-container {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.additem-title {
+  margin-top: 50px;
+  background-color: darkturquoise;
+  font-weight: bolder;
+  font-size: larger;
+  color: darkblue;
+}
+
+.item-box {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  background-color: rgb(216, 225, 225);
+}
+
+.item-name .item-amount .item-pdate .item-method .checkbox {
+  width: 3em;
+  padding: 40px 80px;
+  margin-right: 50px;
+}
+
+.fev-container {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.fev-title {
+  margin-top: 50px;
+  background-color: darkturquoise;
+  font-weight: bolder;
+  font-size: larger;
+  color: darkblue;
+}
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +98,5 @@
     transform: rotate(360deg);
   }
 }
+
+*/

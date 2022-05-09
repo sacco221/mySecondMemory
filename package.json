@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server/index.js",
+    "dev": "nodemon server/index.js",
     "seed": "npx knex seed:run",
-    "knex": "knex"
+    "knex": "knex",
+    "build": "cd ./my-second-memory && npm install && npm run build",
+    "migrate-latest": "npx knex migrate:latest --knexfile knexfile.js",
+    "seed-data": "npx knex seed:run --knexfile knexfile.js"
   },
   "author": "",
   "license": "ISC",
