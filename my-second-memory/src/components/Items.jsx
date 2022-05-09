@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function Items({ data }) {
+export default function Items({ data, deleteItem }) {
+  const [checkedItem, setCheckedItem] = useState({}); //checked items -> checkedItemをAppに伝える
+  const [checked, setChecked] = useState(false);
+
+  // const updateCheckedArray = () => {
+
+  // }
+
+  const isChecked = () => {
+    setChecked(true); // change status to true
+    // setCheckedItem  // update the list of all checked items......
+  };
+
   return (
     <div className="item-container">
       <p className="item-title">Inventory</p>
@@ -12,6 +24,7 @@ export default function Items({ data }) {
             <p className="item-amount">{item.amount}</p>
             <p className="item-pdate">{item.purchace_date}</p>
             <p className="item-mothod">{item.method}</p>
+            <input type="checkbox" className="item-del" onChange={isChecked} />
           </div>
         );
       })}

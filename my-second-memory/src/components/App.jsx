@@ -10,15 +10,22 @@ export default function App() {
   const [data, setData] = useState([]);
 
   const fetchAlldata = async () => {
-    const response = await axios.get("http://localhost:8000/api");
-    console.log("response on fetchall", response.data);
+    const response = await axios
+      .get("http://localhost:8000/api")
+      .catch((error) => console.log(error.response));
     setData(response.data);
   };
 
   useEffect(() => {
-    console.log("now fetch time!");
     fetchAlldata();
-  });
+  }, []);
+
+  const postData = async (addItem) => {
+    await axios
+      .post("http://localhost:8000/post", addItem)
+      .catch((error) => console.log(error.response));
+    fetchAlldata();
+  };
 
   return (
     <div className="App">
@@ -30,7 +37,7 @@ export default function App() {
         <Items data={data} />
       </div>
       <div>
-        <Additems />
+        <Additems postData={postData} />
       </div>
       <div>
         <Currentfevs />

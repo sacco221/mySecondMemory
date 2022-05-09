@@ -13,13 +13,19 @@ require("dotenv").config({
 app.use(express.json());
 app.use(cors());
 
-app.get("/api", (req, res) => {
-  database("items")
+app.get("/api", async (req, res) => {
+  await database("items")
     .select()
     .then((result) => {
-      // console.log("result in app.js", result);
       res.send(result);
     });
+});
+
+app.post("/post", async (req, res) => {
+  await database("items").insert({
+    name: req.body.name,
+    amount: req.body.amount,
+  });
 });
 
 module.exports = app;
