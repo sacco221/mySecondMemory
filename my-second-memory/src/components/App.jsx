@@ -9,6 +9,7 @@ import brain_nobg from "../images/brain_nobg.png";
 export default function App() {
   const [data, setData] = useState([]);
   const [posted, setPosted] = useState(false);
+  const [checkedItem, setCheckedItem] = useState([]); //checked items for items
 
   const fetchAlldata = async () => {
     const response = await axios
@@ -44,7 +45,11 @@ export default function App() {
         Check your current inventory before check out!
       </p>
       <div>
-        <Items data={data} />
+        <Items
+          data={data}
+          setCheckedItem={setCheckedItem}
+          checkedItem={checkedItem}
+        />
       </div>
       <div>
         <Additems postData={postData} setPosted={setPosted} />
