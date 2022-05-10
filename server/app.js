@@ -11,7 +11,7 @@ require("dotenv").config({
 app.use(express.json());
 app.use(cors());
 
-app.get("/api", async (req, res) => {
+app.get("/", async (req, res) => {
   await database("items")
     .select()
     .then((result) => {
