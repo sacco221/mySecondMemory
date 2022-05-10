@@ -11,7 +11,7 @@ export default function App() {
 
   const fetchAlldata = async () => {
     const response = await axios
-      .get("https://second-memory-for-shop.herokuapp.com/")
+      .get("https://second-memory-for-shop.herokuapp.com/getall")
       .catch((error) => console.log(error.response));
     setData(response.data);
   };

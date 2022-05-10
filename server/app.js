@@ -11,11 +11,11 @@ require("dotenv").config({
 app.use(express.json());
 app.use(cors());
 
-app.get("/", async (req, res) => {
+app.get("/getall", async (req, res) => {
   await database("items")
     .select()
     .then((result) => {
-      console.log("result in app.js", result);
+      // console.log("result in app.js", result);
       res.send(result);
     });
 });
