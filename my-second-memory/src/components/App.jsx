@@ -8,6 +8,7 @@ import brain_nobg from "../images/brain_nobg.png";
 
 export default function App() {
   const [data, setData] = useState([]);
+  const [posted, setPosted] = useState(false);
 
   const fetchAlldata = async () => {
     const response = await axios
@@ -24,8 +25,15 @@ export default function App() {
     await axios
       .post("http://localhost:8000/post", addItem)
       .catch((error) => console.log(error.response));
-    fetchAlldata();
   };
+
+  useEffect(() => {
+    if (posted) {
+      fetchAlldata();
+      setPosted(false);
+    }
+    console.log("posted status:", posted);
+  }, [posted]);
 
   return (
     <div className="App">
@@ -39,7 +47,7 @@ export default function App() {
         <Items data={data} />
       </div>
       <div>
-        <Additems postData={postData} />
+        <Additems postData={postData} setPosted={setPosted} />
       </div>
       <div>
         <Currentfevs />

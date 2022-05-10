@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 
-export default function Additems({ postData }) {
+export default function Additems({ postData, setPosted }) {
   const nameRef = useRef(null);
   const amountRef = useRef(null);
   const pDateRef = useRef(null);
@@ -21,6 +21,7 @@ export default function Additems({ postData }) {
 
   function uploadedData() {
     let addItem = pushedButton();
+    setPosted(true);
     postData(addItem);
   }
 
