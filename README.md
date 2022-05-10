@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+This project was create during my study at [Code Chrysalis](https://www.codechrysalis.io/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About the app, My Second memory
 
-## Available Scripts
+Have you ever experienced this at a supermarket or grocery store?
 
-In the project directory, you can run:
+- I came shopping but I don't know what's in the fridge right now...
+- I think it's in stock, but I don't remember. .. ..
+- I can't remember which product I use all the time!
 
-### `npm start`
+If yes、this app may be able to help you.
+If you register the items you have at home, this app will remember your inventory on your behalf and you can check what you have on the go.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Follow this guide to set up your environment...
 
-### `npm test`
+## Database
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project assumes a Postgres database, naturally, this is not included in the package.json file, so must be installed separately.
+Create a database called "mymemory", and store all secret information into your .env (& do not forget add it into .gitignore!).
 
-### `npm run build`
+## Donwloading and installing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repogitory
+   `git clone https://github.com/sacco221/mySecondMemory.git`
+2. GO into the repository on your local
+3. Install dependencies
+   `npm install`
+4. Create a database
+5. Run migration
+   `npm migrate-latest`
+6. Run the app
+   `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Technology used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Node.js](https://nodejs.org/)
+- [Express](https://expressjs.com/)
+- [Knex](http://knexjs.org/)
+- [Postgres](https://www.postgresql.org/)
+- [React](https://reactjs.org/)
+- [Heroku](https://id.heroku.com/)
 
-### `npm run eject`
+# Future features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [ ] Login Function
+- [ ] Register our favorites function
+- [ ] Responsive interface
+- [ ] Good design
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+See more in issues....
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Any contribution and feedbac will be appreciated!
 
-## Learn More
+Project Link: https://second-memory-for-shop.herokuapp.com/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
