@@ -11,7 +11,7 @@ export default function App() {
 
   const fetchAlldata = async () => {
     const response = await axios
-      .get("http://localhost:8000/api")
+      .get("https://second-memory-for-shop.herokuapp.com/api")
       .catch((error) => console.log(error.response));
     setData(response.data);
   };
@@ -22,7 +22,7 @@ export default function App() {
 
   const postData = async (addItem) => {
     await axios
-      .post("http://localhost:8000/post", addItem)
+      .post("https://second-memory-for-shop.herokuapp.com/post", addItem)
       .catch((error) => console.log(error.response));
     fetchAlldata();
   };

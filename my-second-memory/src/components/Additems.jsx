@@ -14,8 +14,6 @@ export default function Additems({ postData }) {
       purchaseDate: pDateRef.current.value,
       method: methodRef.current.value,
     };
-    // console.log("pdate", pDateRef.current.value);
-    // console.log("reslt", result);
     nameRef.current.value = "";
     amountRef.current.value = "";
     return result;
@@ -23,7 +21,6 @@ export default function Additems({ postData }) {
 
   function uploadedData() {
     let addItem = pushedButton();
-    console.log("hey, pushed!");
     postData(addItem);
   }
 
