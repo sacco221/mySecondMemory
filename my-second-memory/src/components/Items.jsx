@@ -17,7 +17,6 @@ export default function Items({ data, deleteItem }) {
     <div className="item-container">
       <p className="item-title">Inventory</p>
       {data.map((item, index) => {
-        const test = item.name;
         return (
           <div className="item-box" key={index}>
             <p className="item-name">{item.name}</p>

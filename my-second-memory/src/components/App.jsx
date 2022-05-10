@@ -11,7 +11,7 @@ export default function App() {
 
   const fetchAlldata = async () => {
     const response = await axios
-      .get("https://second-memory-for-shop.herokuapp.com/getall")
+      .get("http://localhost:8000/getall")
       .catch((error) => console.log(error.response));
     setData(response.data);
   };
@@ -22,7 +22,7 @@ export default function App() {
 
   const postData = async (addItem) => {
     await axios
-      .post("https://second-memory-for-shop.herokuapp.com/post", addItem)
+      .post("http://localhost:8000/post", addItem)
       .catch((error) => console.log(error.response));
     fetchAlldata();
   };
@@ -32,7 +32,6 @@ export default function App() {
       <div className="logo">
         <img src={brain_nobg} alt="MMS" />
       </div>
-      {/* <h1>My Second Memory</h1> */}
       <p className="App-title">
         Check your current inventory before check out!
       </p>

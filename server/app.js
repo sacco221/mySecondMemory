@@ -15,7 +15,6 @@ app.get("/getall", async (req, res) => {
   await database("items")
     .select()
     .then((result) => {
-      // console.log("result in app.js", result);
       res.send(result);
     });
 });
