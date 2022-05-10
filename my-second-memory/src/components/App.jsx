@@ -4,6 +4,7 @@ import Items from "./Items";
 import Currentfevs from "./Currentfevs";
 import Additems from "./Additems";
 import axios from "axios";
+import brain_nobg from "../images/brain_nobg.png";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -28,7 +29,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>My Second Memory</h1>
+      <div className="logo">
+        <img src={brain_nobg} alt="MMS" />
+      </div>
+      {/* <h1>My Second Memory</h1> */}
       <p className="App-title">
         Check your current inventory before check out!
       </p>

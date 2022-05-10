@@ -1,6 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto:wght@100;400&display=swap");
+
 .App {
   text-align: center;
-  background-color: floralwhite;
+  background-color: rgb(231, 245, 231);
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 15px;
+}
+
+.logo img {
+  height: 20vmin;
 }
 
 h1 {
@@ -38,16 +46,24 @@ h1 {
 }
 
 .item-box {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
   margin-bottom: 10px;
-  background-color: rgb(216, 225, 225);
+  background-color: rgb(223, 233, 233);
+  border-radius: 11px;
 }
 
 .item-name .item-amount .item-pdate .item-method .checkbox {
   width: 3em;
   padding: 40px 80px;
   margin-right: 50px;
+}
+
+.item-pdate {
+  font-size: 0.8em;
 }
 
 .fev-container {
